@@ -6,7 +6,7 @@ class Interests(models.Model):
 class Education(models.Model):
     university = models.CharField(max_length=200)
     degree = models.CharField(max_length=200)
-    gpa = models.DecimalField(max_digit=5, decimal_places=2)
+    gpa = models.DecimalField(max_digits=5, decimal_places=2)
 
 class WorkExperience(models.Model):
     job_title = models.CharField(max_length=200)
@@ -29,4 +29,3 @@ class CV_data(models.Model):
     education = models.ManyToManyField(Education)
     work_experience = models.ManyToManyField(WorkExperience)
 
-    
